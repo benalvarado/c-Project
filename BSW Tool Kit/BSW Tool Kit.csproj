@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F43FFAE8-2EDE-4935-9B18-45968DD54F72}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BSW_Tool_Kit</RootNamespace>
+    <AssemblyName>BSW Tool Kit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\bswpirnter\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FC106D799959E4D7B05BCD54179CBC4BEC339E91</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BSW Tool Kit_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>TpqVHaBc.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentationForm.Designer.cs">
+      <DependentUpon>DocumentationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupofRemoteComputersClass.cs" />
+    <Compile Include="GroupofRemoteComputersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupofRemoteComputersForm.Designer.cs">
+      <DependentUpon>GroupofRemoteComputersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalHostClass.cs" />
+    <Compile Include="LogWorker.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormExecutionClass.cs" />
+    <Compile Include="MassCopyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MassCopyForm.Designer.cs">
+      <DependentUpon>MassCopyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MassExecuteForme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MassExecuteForme.Designer.cs">
+      <DependentUpon>MassExecuteForme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyProgressBarColor.cs" />
+    <Compile Include="PrinterInstallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterInstallForm.Designer.cs">
+      <DependentUpon>PrinterInstallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterUninstall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterUninstall.Designer.cs">
+      <DependentUpon>PrinterUninstall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReadPrinterNamestoList.cs" />
+    <Compile Include="RemoteComputerClass.cs" />
+    <Compile Include="RemoteComputerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoteComputerForm.Designer.cs">
+      <DependentUpon>RemoteComputerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoteComputerFormPRNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoteComputerFormPRNT.Designer.cs">
+      <DependentUpon>RemoteComputerFormPRNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunAsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunAsForm.Designer.cs">
+      <DependentUpon>RunAsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="strmWriterUninstall.cs" />
+    <Compile Include="TargetComputerState.cs" />
+    <Compile Include="WhiteSpaceParsing.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentationForm.resx">
+      <DependentUpon>DocumentationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupofRemoteComputersForm.resx">
+      <DependentUpon>GroupofRemoteComputersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MassCopyForm.resx">
+      <DependentUpon>MassCopyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MassExecuteForme.resx">
+      <DependentUpon>MassExecuteForme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterInstallForm.resx">
+      <DependentUpon>PrinterInstallForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterUninstall.resx">
+      <DependentUpon>PrinterUninstall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoteComputerForm.resx">
+      <DependentUpon>RemoteComputerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoteComputerFormPRNT.resx">
+      <DependentUpon>RemoteComputerFormPRNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunAsForm.resx">
+      <DependentUpon>RunAsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\CopyinstDriver.ps1" />
+    <None Include="bin\Debug\CreatePrinter.ps1" />
+    <None Include="bin\Debug\CreatePrinterPort.ps1" />
+    <None Include="bin\Debug\InstallPrintDriver.ps1" />
+    <None Include="bin\Debug\PrinterUninstall.ps1" />
+    <None Include="BSW Tool Kit_TemporaryKey.pfx" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\PrinterUninstall.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyinstDriver.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\CreatePrinter.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\CreatePrinterPort.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\hp400IMG.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InstallPrintDriver.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpbuio170l.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpbuio170le.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpcpu180.cfg" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpcu180b.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpfxbulk.sys" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpfxgen.sys" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpmews01.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpmews01.dat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpmldm01.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpmldm01.dat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpmprein.config" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hppcbulkio.sys" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hppcgenio.sys" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hppewnd.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hppfaxnd.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hppldcoi.config" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hppscnd.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpzid413.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpzid4vp.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpzipa13.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpzipr13.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpzist13.cat" />
+    <None Include="Resources\Laserjet1320-pcl5-x32\hpzius13.cat" />
+    <None Include="Resources\laserJet4350.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\400MFP.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Laserjet1320.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\LaserJet2727.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\UniversalPrinter.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\PrinterImages\400MFP.bmp" />
+    <None Include="bin\Debug\PrinterImages\hp400IMG.bmp" />
+    <Content Include="Resources\BlueCheckMark.jpg" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpbcfgre.dll" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpbuio170l.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpbuio170le.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpbuio32.dll" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpbuiodm32.dll" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpcu180b.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpcu180b.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpmco180.dll" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpmews01.dll" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpmews01.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpmldm01.dll" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpmldm01.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpmprein.dll" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hppewnd.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hppfaxnd.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hppscnd.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpzid413.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpzid4vp.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpzipa13.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpzipr13.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpzist13.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\hpzius13.inf" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\Install.dll" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\Install.exe" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2arww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2bgww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2caww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2csww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2daww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\P5i2deww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2elww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\P5i2enww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\P5i2esww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2etww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2fiww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\P5i2frww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2heww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2hrww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2huww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2idww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\P5i2itww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\P5i2jaww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2kkww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\P5i2koww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2ltww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2lvww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2nlww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2noww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2plww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\P5i2ptww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2roww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2ruww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2skww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2slww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2srww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2svww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2thww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2trww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2ukww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\p5i2viww.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\P5i2zhcn.cab" />
+    <Content Include="Resources\Laserjet1320-pcl5-x32\P5i2zhtw.cab" />
+    <Content Include="TpqVHaBc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="BSW Tool Kit.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\HPUniversalPrintDriver\" />
+    <Folder Include="Resources\Laserjet1320-pcl5-x64\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
